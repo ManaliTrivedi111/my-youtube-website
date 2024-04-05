@@ -1,0 +1,137 @@
+.youtube-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 860px) {
+  .youtube-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 870px) and (max-width: 1124px) {
+  .youtube-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail-row {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+}
+
+.time {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+  border: none;
+  color: white;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 2px;
+  bottom: 8px;
+  right: 5px;
+}
+
+.video-preview {
+  width: 100%;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-title {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.video-stats, .video-author {
+  margin-top:0px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: rgb(96,96,96);
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .video-stats, .video-author  {
+    font-size: 14px;
+  }
+}
+
+.video-link {
+  text-decoration: none;
+  color: black;
+}
+
+.channel {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+}
+
+.channel-picture-tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0;
+  font-family: Roboto, Aria;
+  top: 48px;
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.channel-picture-tooltip img {
+  width: 45px;
+  border-radius: 50px;
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+.channel:hover .channel-picture-tooltip {
+  opacity: 1;
+}
+
+.channel-name {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.subscribers {
+  font-size: 14px;
+  color: rgb(96,96,96);
+}
